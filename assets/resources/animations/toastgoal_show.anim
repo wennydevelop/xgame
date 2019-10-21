@@ -1,0 +1,92 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "toastgoal_show",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 1.0666666666666667,
+  "sample": 30,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "paths": {
+      "root": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                0,
+                699
+              ],
+              "curve": [
+                0.39,
+                0.77,
+                0.6,
+                0.92
+              ]
+            },
+            {
+              "frame": 0.1,
+              "value": [
+                0,
+                127
+              ]
+            },
+            {
+              "frame": 0.16666666666666666,
+              "value": [
+                0,
+                145
+              ]
+            },
+            {
+              "frame": 0.9,
+              "value": [
+                0,
+                155
+              ],
+              "curve": [
+                0.41,
+                0.18,
+                0.62,
+                0.89
+              ]
+            },
+            {
+              "frame": 1.0666666666666667,
+              "value": [
+                0,
+                699
+              ]
+            }
+          ],
+          "opacity": [
+            {
+              "frame": 0,
+              "value": 0
+            },
+            {
+              "frame": 0.1,
+              "value": 255
+            },
+            {
+              "frame": 0.9666666666666667,
+              "value": 255,
+              "curve": [
+                0.39,
+                0.17,
+                0.66,
+                0.88
+              ]
+            },
+            {
+              "frame": 1.0666666666666667,
+              "value": 0
+            }
+          ]
+        }
+      }
+    }
+  },
+  "events": []
+}

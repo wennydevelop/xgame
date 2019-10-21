@@ -1,0 +1,20 @@
+
+boluo.png
+size: 256,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+boluo
+  rotate: true
+  xy: 2, 2
+  size: 118, 197
+  orig: 118, 197
+  offset: 0, 0
+  index: -1
+yinying
+  rotate: true
+  xy: 201, 24
+  size: 96, 35
+  orig: 96, 35
+  offset: 0, 0
+  index: -1

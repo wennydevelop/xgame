@@ -1,0 +1,90 @@
+
+longmao.png
+size: 261,126
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+erduo1
+  rotate: true
+  xy: 117, 1
+  size: 21, 30
+  orig: 21, 30
+  offset: 0, 0
+  index: -1
+erduo2
+  rotate: true
+  xy: 189, 1
+  size: 23, 38
+  orig: 23, 38
+  offset: 0, 0
+  index: -1
+shenti
+  rotate: false
+  xy: 1, 2
+  size: 115, 123
+  orig: 115, 123
+  offset: 0, 0
+  index: -1
+weiba
+  rotate: false
+  xy: 225, 27
+  size: 35, 29
+  orig: 35, 29
+  offset: 0, 0
+  index: -1
+yan1
+  rotate: false
+  xy: 169, 1
+  size: 7, 7
+  orig: 7, 7
+  offset: 0, 0
+  index: -1
+yan22
+  rotate: false
+  xy: 177, 1
+  size: 7, 7
+  orig: 7, 7
+  offset: 0, 0
+  index: -1
+ye
+  rotate: false
+  xy: 117, 23
+  size: 71, 102
+  orig: 71, 102
+  offset: 0, 0
+  index: -1
+yinying
+  rotate: true
+  xy: 189, 25
+  size: 100, 35
+  orig: 100, 35
+  offset: 0, 0
+  index: -1
+youjiao
+  rotate: false
+  xy: 148, 8
+  size: 20, 14
+  orig: 20, 14
+  offset: 0, 0
+  index: -1
+youshou
+  rotate: false
+  xy: 225, 57
+  size: 34, 68
+  orig: 34, 68
+  offset: 0, 0
+  index: -1
+zuojiao
+  rotate: false
+  xy: 169, 9
+  size: 19, 13
+  orig: 19, 13
+  offset: 0, 0
+  index: -1
+zuoshou
+  rotate: false
+  xy: 228, 1
+  size: 30, 25
+  orig: 30, 25
+  offset: 0, 0
+  index: -1
