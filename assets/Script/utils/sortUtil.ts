@@ -13,6 +13,7 @@ export default class sortUtil{
         a = this.s_bubble(a);
     }
 
+    // 冒泡
     s_bubble(arr:number[]):number[]{
         let len:number= arr.length;
         let tmp:number = 0;
@@ -28,6 +29,7 @@ export default class sortUtil{
         return arr;
     }
 
+    // 快速
     s_quick(arr:number[]):number[]{
         let qUpSort = (resArr: number[], left: number, right: number) => {
             if (right <= left) {
