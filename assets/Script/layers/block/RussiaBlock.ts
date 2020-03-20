@@ -215,7 +215,7 @@ export default class RussiaBlock extends Dialog {
     }
 
     onload(){
-        MapHelper.instance.initMapInfo(this.board.width,this.board.height,block_width,block_height);
+        MapHelper.instance.initMapInfo(block_width,block_height,this.board.width/block_width,this.board.height/block_height);
     }
 
     start () {

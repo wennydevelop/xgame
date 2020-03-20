@@ -53,7 +53,8 @@ export default class xgame extends Scene {
                 }else if(target.name==="btn_tank"){
                     Core.instance.showLayer("prefabs/tank");
                 }else if(target.name==="btn_block"){
-                    Core.instance.showLayer("prefabs/russiablock");
+                    //Core.instance.showLayer("prefabs/russiablock");
+                    Core.instance.showLayer("prefabs/astar");
                 }
             }
         }
