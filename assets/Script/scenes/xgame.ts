@@ -53,8 +53,11 @@ export default class xgame extends Scene {
                 }else if(target.name==="btn_tank"){
                     Core.instance.showLayer("prefabs/tank");
                 }else if(target.name==="btn_block"){
-                    //Core.instance.showLayer("prefabs/russiablock");
+                    Core.instance.showLayer("prefabs/russiablock");
+                }else if(target.name==="btn_astar"){
                     Core.instance.showLayer("prefabs/astar");
+                }else if(target.name==="btn_spinetest"){
+                    Core.instance.showLayer("prefabs/spineTest");
                 }
             }
         }
@@ -63,7 +66,7 @@ export default class xgame extends Scene {
     valideEvent(valide:boolean){
         if(valide){
             GlobalEmit.instance.messageEmit.on("CloseLayer", (e)=>{
-                console.log("close layer~");
+                console.log("close layer "+e);
             });
         }else{
             GlobalEmit.instance.messageEmit.off("CloseLayer");
