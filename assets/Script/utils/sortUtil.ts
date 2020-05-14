@@ -1,33 +1,33 @@
 
-export default class sortUtil{
+export default class sortUtil {
     protected static _instance: sortUtil
-    public static get instance():sortUtil{
-        if(!this._instance){
+    public static get instance(): sortUtil {
+        if (!this._instance) {
             this._instance = new sortUtil();
         }
         return this._instance;
     }
 
-    test(){
-        let a = [12,3,6,2,9,4,1,8,7,19,15,13,16,18,28,26,27,33,38,35,37,36,32,31,5,6,8,2,99,100,85,62,72,1]
+    test() {
+        let a = [12, 3, 6, 2, 9, 4, 1, 8, 7, 19, 15, 13, 16, 18, 28, 26, 27, 33, 38, 35, 37, 36, 32, 31, 5, 6, 8, 2, 99, 100, 85, 62, 72, 1]
         a = this.s_bubble(a);
     }
 
     // 冒泡排序
-    s_bubble(arr:number[]):number[]{
-        let len:number= arr.length;
-        let tmp:number = 0;
-        let isSwap:boolean=true;
-        for(let i=0;i<len;i++){
+    s_bubble(arr: number[]): number[] {
+        let len: number = arr.length;
+        let tmp: number = 0;
+        let isSwap: boolean = true;
+        for (let i = 0; i < len; i++) {
             // 如果有一次循环中没有产生交换,则说明数组已经是有序的
-            if(!isSwap){ break;}
-            isSwap=false;
-            for(let j=i+1;j<len;j++){
-                if(arr[i]>arr[j]){
-                    tmp=arr[i];
-                    arr[i]=arr[j];
-                    arr[j]=tmp;
-                    isSwap=true;
+            if (!isSwap) { break; }
+            isSwap = false;
+            for (let j = i + 1; j < len; j++) {
+                if (arr[i] > arr[j]) {
+                    tmp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = tmp;
+                    isSwap = true;
                 }
             }
         }
@@ -35,7 +35,7 @@ export default class sortUtil{
     }
 
     // 快速排序
-    s_quick(arr:number[]):number[]{
+    s_quick(arr: number[]): number[] {
         let qUpSort = (resArr: number[], left: number, right: number) => {
             if (right <= left) {
                 //console.log("sort end left: " + left + " right: " + right);
@@ -69,18 +69,18 @@ export default class sortUtil{
     }
 
     // 选择排序
-    s_select(arr:number[]):number[]{
-        for(let i=0;i<arr.length;i++){
-            let minIndex:number=0;
-            for(let j=i+1;j<arr.length;j++){
-                if(arr[minIndex]>arr[j]){ 
-                    minIndex=j;
+    s_select(arr: number[]): number[] {
+        for (let i = 0; i < arr.length; i++) {
+            let minIndex: number = 0;
+            for (let j = i + 1; j < arr.length; j++) {
+                if (arr[minIndex] > arr[j]) {
+                    minIndex = j;
                 }
             }
-            if(minIndex!=i){
-                let tmp=arr[i];
-                arr[i]=arr[minIndex];
-                arr[minIndex]=tmp;
+            if (minIndex != i) {
+                let tmp = arr[i];
+                arr[i] = arr[minIndex];
+                arr[minIndex] = tmp;
             }
         }
         return arr;
@@ -89,14 +89,56 @@ export default class sortUtil{
     // classic argorithm begin //
 
     // 扑克洗牌
-    shuffle(arr:number[]):number[]{
-        for(let i=arr.length-1;i>0;i--){
-            let index = Math.floor(Math.random()*i);
+    shuffle(arr: number[]): number[] {
+        for (let i = arr.length - 1; i > 0; i--) {
+            let index = Math.floor(Math.random() * i);
             let tmp = arr[i];
             arr[i] = arr[index];
-            arr[index]=tmp;
+            arr[index] = tmp;
         }
         return arr;
+    }
+
+    // 字符串匹配 kmp 在文本 text 中寻找模式串 pattern，返回所有匹配的位置开头
+    // site:http://www.ruanyifeng.com/blog/2013/05/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm.html
+    kmp_match(text: string, pattern: string) {
+        let positions: number[] = [];
+        let maxMatchLengths: number[] = this.calculateMaxMatchLengths(pattern);
+        console.log(`匹配串: ${text}`);
+        console.log(`模式串: ${pattern}`);
+        console.log(`最大匹配数表: ${maxMatchLengths.join(`-`)}`);
+        let count = 0;
+        for (let i = 0; i < text.length; i++) {
+            while (count > 0 && pattern.charAt(count) != text.charAt(i)) {
+                count = maxMatchLengths[count - 1];
+            }
+            if (pattern.charAt(count) == text.charAt(i)) {
+                count++;
+            }
+            if (count == pattern.length) {
+                positions.push(i - pattern.length + 1)
+                count = maxMatchLengths[count - 1];
+            }
+        }
+        console.log(`匹配结果: ${positions.join("-")}`);
+        return positions;
+    }
+    // 构造模式串 pattern 的最大匹配数表
+    calculateMaxMatchLengths(pattern: string): number[] {
+        let maxMatchLengths: number[] = [];
+        for (let i = 0; i < pattern.length; i++) { maxMatchLengths[i] = 0; }
+        let maxLength: number = 0;
+        maxMatchLengths[0] = 0;
+        for (let i = 1; i < pattern.length; i++) {
+            while (maxLength > 0 && pattern.charAt(maxLength) != pattern.charAt(i)) {
+                maxLength = maxMatchLengths[maxLength - 1];
+            }
+            if (pattern.charAt(maxLength) == pattern.charAt(i)) {
+                maxLength++;
+            }
+            maxMatchLengths[i] = maxLength;
+        }
+        return maxMatchLengths;
     }
 
     // classic argorithm end   //
