@@ -90,10 +90,10 @@ export default class sortUtil {
 
     // 扑克洗牌
     shuffle(arr: number[]): number[] {
-        for (let i = arr.length - 1; i > 0; i--) {
+        for (let i = arr.length; i > 0; i--) {
             let index = Math.floor(Math.random() * i);
-            let tmp = arr[i];
-            arr[i] = arr[index];
+            let tmp = arr[i - 1];
+            arr[i - 1] = arr[index];
             arr[index] = tmp;
         }
         return arr;
