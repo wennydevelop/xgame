@@ -1,0 +1,132 @@
+
+feijijiangshi.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+attack (1)
+  rotate: false
+  xy: 880, 205
+  size: 89, 49
+  orig: 144, 116
+  offset: 16, 30
+  index: -1
+attack (2)
+  rotate: true
+  xy: 761, 164
+  size: 38, 21
+  orig: 144, 116
+  offset: 25, 42
+  index: -1
+attack (3)
+  rotate: false
+  xy: 294, 63
+  size: 118, 59
+  orig: 144, 116
+  offset: 13, 25
+  index: -1
+attack (4)
+  rotate: true
+  xy: 971, 181
+  size: 73, 42
+  orig: 144, 116
+  offset: 16, 32
+  index: -1
+attack (5)
+  rotate: false
+  xy: 157, 5
+  size: 101, 55
+  orig: 144, 116
+  offset: 11, 26
+  index: -1
+attack (6)
+  rotate: true
+  xy: 260, 18
+  size: 42, 28
+  orig: 144, 116
+  offset: 23, 40
+  index: -1
+attack (7)
+  rotate: false
+  xy: 426, 113
+  size: 83, 45
+  orig: 144, 116
+  offset: 15, 30
+  index: -1
+daodan
+  rotate: false
+  xy: 671, 204
+  size: 114, 50
+  orig: 116, 52
+  offset: 0, 1
+  index: -1
+feiji
+  rotate: false
+  xy: 2, 62
+  size: 290, 192
+  orig: 292, 194
+  offset: 1, 1
+  index: -1
+feiji2
+  rotate: false
+  xy: 787, 190
+  size: 91, 64
+  orig: 93, 66
+  offset: 1, 1
+  index: -1
+jiyi
+  rotate: false
+  xy: 2, 10
+  size: 153, 50
+  orig: 155, 52
+  offset: 1, 1
+  index: -1
+qiang
+  rotate: false
+  xy: 671, 164
+  size: 88, 38
+  orig: 90, 40
+  offset: 1, 1
+  index: -1
+qiang2
+  rotate: true
+  xy: 511, 113
+  size: 45, 30
+  orig: 47, 32
+  offset: 1, 1
+  index: -1
+shenti
+  rotate: true
+  xy: 414, 48
+  size: 63, 68
+  orig: 65, 70
+  offset: 1, 1
+  index: -1
+tou
+  rotate: false
+  xy: 294, 124
+  size: 130, 130
+  orig: 132, 132
+  offset: 1, 1
+  index: -1
+yinying
+  rotate: false
+  xy: 260, 2
+  size: 40, 14
+  orig: 40, 14
+  offset: 0, 0
+  index: -1
+youshou
+  rotate: false
+  xy: 555, 161
+  size: 114, 93
+  orig: 116, 95
+  offset: 1, 1
+  index: -1
+zuoshou
+  rotate: false
+  xy: 426, 160
+  size: 127, 94
+  orig: 129, 96
+  offset: 1, 1
+  index: -1

@@ -3,7 +3,7 @@ import GlobalEmit from '../core/GlobalEmit';
 import Core from '../core/Core';
 import loadUtil from '../utils/loadUtils';
 
-const {ccclass, property} = cc._decorator;
+const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class spineTest extends Dialog {
@@ -13,54 +13,54 @@ export default class spineTest extends Dialog {
     @property(cc.Node)
     sample: cc.Node = null;
 
-    private _animationsName:string[]=[];
-    private _animationIndex:number=0;
-    onInit(data:any){
+    private _animationsName: string[] = [];
+    private _animationIndex: number = 0;
+    onInit(data: any) {
 
     }
 
-    async onCilckStart(){
+    async onCilckStart() {
         let skeleton = this.sample.getComponent(sp.Skeleton);
-        let nowAnimation:string = skeleton.animation;
-        if(nowAnimation!="idle"){ return;}
-        if(this._animationsName.length<=0){ return;}
+        let nowAnimation: string = skeleton.animation;
+        if (nowAnimation != "idle") { return; }
+        if (this._animationsName.length <= 0) { return; }
 
         // play
-        let playAnimation:string=this._animationsName[this._animationIndex];
-        skeleton.animation=playAnimation;
+        let playAnimation: string = this._animationsName[this._animationIndex];
+        skeleton.animation = playAnimation;
         skeleton.setCompleteListener(() => {
             skeleton.animation = "idle";
             skeleton.setCompleteListener(null);
         });
-        console.log("play animation "+playAnimation);
+        console.log("play animation " + playAnimation);
         // next
-        let len:number = this._animationsName.length;
-        if(this._animationIndex>=(len-1)){
-            this._animationIndex=0;
-        }else{
-            this._animationIndex +=1;
+        let len: number = this._animationsName.length;
+        if (this._animationIndex >= (len - 1)) {
+            this._animationIndex = 0;
+        } else {
+            this._animationIndex += 1;
         }
     }
 
-    onload(){
-        
+    onload() {
+
     }
 
-    async start () {
+    async start() {
+        // aersasi
+        await this.loadSpine(this.sample, "spine/feijijiangshi");
+    }
+
+    update(dt) {
         // 
-        await this.loadSpine(this.sample,"spine/aersasi");
     }
 
-    update(dt){
-        // 
+    onDestroy() {
+
     }
 
-    onDestroy(){
-        
-    }
-
-    async loadSpine(node:cc.Node,url:string,animation?:string){
-        if(!node || !node.getComponent(sp.Skeleton)){ return;}
+    async loadSpine(node: cc.Node, url: string, animation?: string) {
+        if (!node || !node.getComponent(sp.Skeleton)) { return; }
         node.active = false;
         let skeletonData = await loadUtil.loadRes(url, sp.SkeletonData) as sp.SkeletonData;
         let skeleton = node.getComponent(sp.Skeleton);
@@ -76,8 +76,8 @@ export default class spineTest extends Dialog {
         }
     }
 
-    onClickClose(){
-        GlobalEmit.instance.messageEmit.emit("CloseLayer","spineTest");
+    onClickClose() {
+        GlobalEmit.instance.messageEmit.emit("CloseLayer", "spineTest");
         this.close();
     }
 }
