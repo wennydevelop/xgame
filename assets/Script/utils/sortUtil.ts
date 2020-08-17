@@ -124,7 +124,7 @@ export default class sortUtil {
         return positions;
     }
     // 构造模式串 pattern 的最大匹配数表
-    calculateMaxMatchLengths(pattern: string): number[] {
+    protected calculateMaxMatchLengths(pattern: string): number[] {
         let maxMatchLengths: number[] = [];
         for (let i = 0; i < pattern.length; i++) { maxMatchLengths[i] = 0; }
         let maxLength: number = 0;
