@@ -185,10 +185,11 @@
       "support_platform": [
         "Android"
       ],
-      "package_download_url": "https://download.cocos.com/CocosUdc/plugins/service-hmslocation/0.5.6_4.0.4.zip",
-      "package_version_desc": "<p><strong>更新日期：</strong> 2020/08/19<br />\n<strong>更新说明：</strong><br />\n增加 HUAWEI 位置服务的支持<br />\n",
+      "package_download_url": "https://download.cocos.com/CocosUdc/plugins/service-hmslocation/0.5.8_5.0.2.zip",
+      "package_version_desc": "<p><strong>更新日期：</strong> 2020/09/30<br />\n<strong>更新说明：</strong><br />\n新增部分 API<br />\n",
       "service_component_name": "service-hmslocation",
       "package_versions": [
+        "0.5.8_5.0.2",
         "0.5.6_4.0.4"
       ],
       "build_platform": [
@@ -241,10 +242,11 @@
       "support_platform": [
         "Android"
       ],
-      "package_download_url": "https://download.cocos.com/CocosUdc/plugins/service-sdkhub/0.6.4_0.1.1.zip",
-      "package_version_desc": "<p><strong>更新日期：</strong> 2020/09/15<br />\n<strong>更新说明：</strong><br />\n修复 BUG<br />\n",
+      "package_download_url": "https://download.cocos.com/CocosUdc/plugins/service-sdkhub/0.6.5_0.1.1.zip",
+      "package_version_desc": "<p><strong>更新日期：</strong> 2020/09/30<br />\n<strong>更新说明：</strong><br />\n修复 BUG<br />\n",
       "service_component_name": "service-sdkhub",
       "package_versions": [
+        "0.6.5_0.1.1",
         "0.6.4_0.1.1",
         "0.6.2_0.1.0",
         "0.6.1_0.1.0"
