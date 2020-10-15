@@ -8,7 +8,7 @@ const { ccclass, property } = cc._decorator;
 export default class BaseObj extends cc.Component {
 
     @property(cc.Node)
-    realSize: cc.Node = null;
+    realObj: cc.Node = null;
 
     protected _uid: number = 0;
     protected _originPos: cc.Vec2 = cc.v2(0, 0);
@@ -36,7 +36,10 @@ export default class BaseObj extends cc.Component {
             }
         }
 
-        if (this._moveControl) { this.node.position = this._moveControl.postion; }
+        if (this._moveControl) {
+            this.node.position = this._moveControl.postion;
+            //this.realObj.rotation = this._moveControl.rotation;
+        }
     }
 
     protected onCmd(cmd: WarCmd) {
@@ -50,6 +53,6 @@ export default class BaseObj extends cc.Component {
     }
 
     protected _initMoveCtrl() {
-        this._moveControl = new ObjMove(this._originPos, this.realSize.getContentSize());
+        this._moveControl = new ObjMove(this._originPos, this.realObj.getContentSize());
     }
 }

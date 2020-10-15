@@ -3,6 +3,7 @@ import GlobalEmit from '../core/GlobalEmit';
 import BaseObj from './comp/BaseObj';
 import gm from './manager/gameManager';
 import Joystick from '../comp/Joystick';
+import { CmdType } from './DefineUtil';
 
 const { ccclass, property } = cc._decorator;
 
@@ -14,10 +15,10 @@ export default class warPanel extends Dialog {
     @property(cc.Node)
     JoysNode: cc.Node = null;
 
-    @property(cc.Node)
+    @property(cc.Prefab)
     plane: cc.Prefab = null;
 
-    @property(cc.Node)
+    @property(cc.Prefab)
     joystick: cc.Prefab = null;
 
     protected _joys: cc.Node = null;
@@ -27,12 +28,25 @@ export default class warPanel extends Dialog {
     onload() { }
 
     start() {
-        let tmp = cc.instantiate(this.joystick);
-        tmp.parent = this.JoysNode;
-        let comp = tmp.getComponent(Joystick);
+        this._joys = cc.instantiate(this.joystick);
+        this._joys.parent = this.JoysNode;
+        let comp = this._joys.getComponent(Joystick);
     }
 
-    update(dt) { }
+    update(dt: number) {
+        if (gm.isRunning()) {
+            let comp = this._joys.getComponent(Joystick);
+            if (comp) {
+                let move = comp.getMove();
+                if (move.x != 0 && move.y != 0) {
+                    console.log(`move cmd x:${move.x} y:${move.y}`);
+                    gm.playerSelf.onControlCmd({ t: CmdType.move, p1: move.x, p2: move.y })
+                }
+            }
+        }
+
+        gm.gameUpdate(dt);
+    }
 
     onDestroy() { }
 

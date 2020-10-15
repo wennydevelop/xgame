@@ -4,20 +4,20 @@ import utilTest from '../utils/utilTest';
 import GlobalEmit from '../core/GlobalEmit';
 import { initTable } from '../config/cfg/TableInit';
 
-const {ccclass, property} = cc._decorator;
+const { ccclass, property } = cc._decorator;
 @ccclass
 export default class xgame extends Scene {
 
     @property(cc.Label)
     label: cc.Label = null;
 
-    protected baseKey:string = "";
-    protected centerKey:string = "";
+    protected baseKey: string = "";
+    protected centerKey: string = "";
 
-    onload(){
+    onload() {
     }
 
-    start () {
+    start() {
 
         // 界面ui框架初始化
         Core.instance.init();
@@ -28,88 +28,90 @@ export default class xgame extends Scene {
         this.test();
     }
 
-    update(dt){
+    update(dt) {
         // 
     }
 
-    onDestroy(){
+    onDestroy() {
         Core.instance.off(Core.SHOW);
         Core.instance.off(Core.HIDE);
         this.valideEvent(false);
     }
 
-    onClickBottom(sender: cc.Event.EventTouch){
-        if(sender){
-            let target:cc.Node = sender.currentTarget;
-            if(target){
-                if(target.name==="btn_test"){
+    onClickBottom(sender: cc.Event.EventTouch) {
+        if (sender) {
+            let target: cc.Node = sender.currentTarget;
+            if (target) {
+                if (target.name === "btn_test") {
                     Core.instance.showLayer("prefabs/test");
-                }else if(target.name==="btn_frappy"){
+                } else if (target.name === "btn_frappy") {
                     Core.instance.showLayer("prefabs/frappydragon");
-                }else if(target.name==="btn_frappyunlimit"){
+                } else if (target.name === "btn_frappyunlimit") {
                     Core.instance.showLayer("prefabs/frappyunlimit");
-                }else if(target.name==="btn_pinball"){
+                } else if (target.name === "btn_pinball") {
                     Core.instance.showLayer("prefabs/pinball");
-                }else if(target.name==="btn_tank"){
+                } else if (target.name === "btn_tank") {
                     Core.instance.showLayer("prefabs/tank");
-                }else if(target.name==="btn_block"){
+                } else if (target.name === "btn_block") {
                     Core.instance.showLayer("prefabs/russiablock");
-                }else if(target.name==="btn_astar"){
+                } else if (target.name === "btn_astar") {
                     Core.instance.showLayer("prefabs/astar");
-                }else if(target.name==="btn_spinetest"){
+                } else if (target.name === "btn_spinetest") {
                     Core.instance.showLayer("prefabs/spineTest");
+                } else if (target.name === "btn_war") {
+                    Core.instance.showLayer("prefabs/warPanel");
                 }
             }
         }
     }
 
-    valideEvent(valide:boolean){
-        if(valide){
-            GlobalEmit.instance.messageEmit.on("CloseLayer", (e)=>{
-                console.log("close layer "+e);
+    valideEvent(valide: boolean) {
+        if (valide) {
+            GlobalEmit.instance.messageEmit.on("CloseLayer", (e) => {
+                console.log("close layer " + e);
             });
-        }else{
+        } else {
             GlobalEmit.instance.messageEmit.off("CloseLayer");
         }
     }
 
     // 
-    test(){
+    test() {
         //this.testEncrypt()
         //utilTest.instance.testStorage()
         //this.testMath();
         //utilTest.instance.testCfg();
     }
 
-    protected testEncrypt(){
+    protected testEncrypt() {
         utilTest.instance.testEncryption();
     }
 
-    protected testMath(){
+    protected testMath() {
 
-        let outputJiaodu= (value:number)=>{
+        let outputJiaodu = (value: number) => {
             let outJd = 0;
-            if(value){
-                outJd = (value*180)/Math.PI
+            if (value) {
+                outJd = (value * 180) / Math.PI
             }
-            console.log("偏移角度: "+outJd);
-        } 
+            console.log("偏移角度: " + outJd);
+        }
 
-        let value = Math.atan2(1,0);
+        let value = Math.atan2(1, 0);
         outputJiaodu(value);
-        value = Math.atan2(1,1);
+        value = Math.atan2(1, 1);
         outputJiaodu(value);
-        value = Math.atan2(0,1)
+        value = Math.atan2(0, 1)
         outputJiaodu(value);
-        value = Math.atan2(-1,1);
+        value = Math.atan2(-1, 1);
         outputJiaodu(value);
-        value = Math.atan2(-1,0);
+        value = Math.atan2(-1, 0);
         outputJiaodu(value);
-        value = Math.atan2(-1,-1);
+        value = Math.atan2(-1, -1);
         outputJiaodu(value);
-        value = Math.atan2(0,-1);
+        value = Math.atan2(0, -1);
         outputJiaodu(value);
-        value = Math.atan2(1,-1);
+        value = Math.atan2(1, -1);
         outputJiaodu(value);
     }
 }

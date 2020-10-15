@@ -15,6 +15,7 @@ export class GameManager {
         this._id += 1;
         return this._id;
     }
+    public isRunning() { return this._running; }
     public gameStart() {
         this._running = true;
     }
@@ -44,6 +45,8 @@ export class GameManager {
 
         let user = new Player(id, node);
         if (self) { this.playerSelf = user; }
+        let objComp = node.getComponent(BaseObj);
+        if (objComp) { objComp.setPlayer(user); }
         return user;
     }
 
