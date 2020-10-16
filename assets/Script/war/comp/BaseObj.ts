@@ -38,7 +38,7 @@ export default class BaseObj extends cc.Component {
 
         if (this._moveControl) {
             this.node.position = this._moveControl.postion;
-            //this.realObj.rotation = this._moveControl.rotation;
+            this.realObj.rotation = this._moveControl.rotation;
         }
     }
 

@@ -62,7 +62,7 @@ export default class Joystick extends cc.Component {
 
     protected _calculateMoveDis(pos: cc.Vec2): cc.Vec2 {
         if (pos.x == 0) { return cc.v2(0, pos.y / this._radius); }
-        let y = pos.y / pos.x;
+        let y = pos.y / Math.abs(pos.x);
         y = y > 1 ? 1 : y;
         y = y < -1 ? -1 : y;
         return cc.v2(pos.x / this._radius, y);

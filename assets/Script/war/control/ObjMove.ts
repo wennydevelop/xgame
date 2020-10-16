@@ -25,7 +25,9 @@ export default class ObjMove {
         this._position = cc.v2(posX, posY);
 
         let value = Math.atan2(y, x);
-        if (value) { this._rotation = (value * 180) / Math.PI; }
+        if (value) {
+            let angle: number = (value * 180) / Math.PI;
+            this._rotation = angle > 0 ? (360 + (90 - angle)) : (90 - angle);
+        }
     }
-
 }
