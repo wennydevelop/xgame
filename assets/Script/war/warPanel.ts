@@ -39,7 +39,7 @@ export default class warPanel extends Dialog {
             if (comp) {
                 let move = comp.getMove();
                 if (move.x != 0 && move.y != 0) {
-                    console.log(`move cmd x:${move.x} y:${move.y}`);
+                    //console.log(`move cmd x:${move.x} y:${move.y}`);
                     gm.playerSelf.onControlCmd({ t: CmdType.move, p1: move.x, p2: move.y })
                 }
             }
