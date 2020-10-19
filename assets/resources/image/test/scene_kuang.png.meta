@@ -1,13 +1,16 @@
 {
-  "ver": "2.2.0",
+  "ver": "2.3.3",
   "uuid": "0291b33c-75ee-4fe5-97ab-239097b49a1c",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
   "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "platformSettings": {},
   "subMetas": {
     "scene_kuang": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "e545413e-3fa7-4c1b-8f2c-c109f5fbc7fb",
       "rawTextureUuid": "0291b33c-75ee-4fe5-97ab-239097b49a1c",
       "trimType": "auto",

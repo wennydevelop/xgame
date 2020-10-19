@@ -1,3 +1,4 @@
+import { HalfAngle, FullAngle, RightAngle } from "../DefineUtil";
 
 // 物体的运动控制
 export default class ObjMove {
@@ -25,12 +26,12 @@ export default class ObjMove {
         if (posX - this._planeSize.width / 2 <= -this._maxWidth) { posX = this._position.x; }
         if (posY + this._planeSize.height / 2 >= this._maxHeight) { posY = this._position.y; }
         if (posY - this._planeSize.height / 2 <= -this._maxHeight) { posY = this._position.y; }
-        this._position = cc.v2(posX, posY);
 
+        this._position = cc.v2(posX, posY);
         let value = Math.atan2(y, x);
         if (value) {
-            let angle: number = (value * 180) / Math.PI;
-            this._rotation = angle > 0 ? (360 + (90 - angle)) : (90 - angle);
+            let angle: number = (value * HalfAngle) / Math.PI;
+            this._rotation = angle > 0 ? (FullAngle + (RightAngle - angle)) : (RightAngle - angle);
         }
     }
 }
