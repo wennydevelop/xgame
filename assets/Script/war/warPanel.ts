@@ -1,14 +1,14 @@
-import Dialog from '../core/Dialog';
 import GlobalEmit from '../core/GlobalEmit';
 import BaseObj from './comp/BaseObj';
 import gm from './manager/gameManager';
 import Joystick from '../comp/Joystick';
 import { CmdType } from './DefineUtil';
+import BasePanel from '../core/BasePanel';
 
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class warPanel extends Dialog {
+export default class warPanel extends BasePanel {
     @property(cc.Node)
     gameNode: cc.Node = null;
 
