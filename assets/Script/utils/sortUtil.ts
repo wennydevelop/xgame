@@ -141,5 +141,16 @@ export default class sortUtil {
         return maxMatchLengths;
     }
 
+    /**
+     * 只出现一次的数字
+     * 给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素
+     */
+    public getOne(a: number[]) {
+        // 运用异或运算
+        // 异或运算 同为真 结果大于0 异为假 结果等于0 
+        // 异或运算满足交换律 a ^ b = c c ^ a = b
+        // 因此将数组内元素异或一遍即可得到 这个只出现一次的数字
+    }
+
     // classic argorithm end   //
 }
