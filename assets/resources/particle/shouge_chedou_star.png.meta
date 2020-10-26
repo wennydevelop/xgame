@@ -1,16 +1,13 @@
 {
-  "ver": "2.3.3",
+  "ver": "2.2.0",
   "uuid": "bcfc6d9e-a096-416a-8364-5e6869587193",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
   "premultiplyAlpha": false,
-  "genMipmaps": false,
-  "packable": true,
-  "platformSettings": {},
   "subMetas": {
     "shouge_chedou_star": {
-      "ver": "1.0.4",
+      "ver": "1.0.3",
       "uuid": "2c8386ec-e832-4ee5-ae72-011731041f7d",
       "rawTextureUuid": "bcfc6d9e-a096-416a-8364-5e6869587193",
       "trimType": "auto",

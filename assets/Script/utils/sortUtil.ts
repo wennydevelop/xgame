@@ -146,6 +146,7 @@ export default class sortUtil {
      * 给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素
      */
     public getOne(a: number[]) {
+        // leetcode 136 137 260
         // 运用异或运算
         // 异或运算 同为真 结果大于0 异为假 结果等于0 
         // 异或运算满足交换律 a ^ b = c c ^ a = b

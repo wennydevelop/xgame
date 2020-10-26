@@ -1,16 +1,13 @@
 {
-  "ver": "2.3.3",
+  "ver": "2.2.0",
   "uuid": "4e8aa25d-ad02-4bc1-9e72-75479f847736",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
   "premultiplyAlpha": false,
-  "genMipmaps": false,
-  "packable": true,
-  "platformSettings": {},
   "subMetas": {
     "farmer_bg3": {
-      "ver": "1.0.4",
+      "ver": "1.0.3",
       "uuid": "6fa00570-c8bb-4c47-ab47-2884e7ffd32e",
       "rawTextureUuid": "4e8aa25d-ad02-4bc1-9e72-75479f847736",
       "trimType": "auto",

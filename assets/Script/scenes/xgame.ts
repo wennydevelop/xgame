@@ -81,10 +81,24 @@ export default class xgame extends Scene {
         //utilTest.instance.testStorage()
         //this.testMath();
         //utilTest.instance.testCfg();
+        this.test1();
     }
 
     protected testEncrypt() {
         utilTest.instance.testEncryption();
+    }
+
+    protected test1() {
+        let a = 2 ^ 3;
+        let b = a ^ 2;
+        let c = a ^ 3;
+        let d = 2 ^ 1;
+        let arr = [4, 2, 2, 3, 3];
+        let res: number = 0;
+        for (let i = 0; i < arr.length; i++) {
+            res = res ^ arr[i];
+        }
+        let e = 10;
     }
 
     protected testMath() {

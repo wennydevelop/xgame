@@ -1,16 +1,13 @@
 {
-  "ver": "2.3.3",
+  "ver": "2.2.0",
   "uuid": "f7069a26-f7f2-4a55-8902-ad26ad2454a3",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
   "premultiplyAlpha": false,
-  "genMipmaps": false,
-  "packable": true,
-  "platformSettings": {},
   "subMetas": {
     "aersasi": {
-      "ver": "1.0.4",
+      "ver": "1.0.3",
       "uuid": "45047044-de3a-4d06-91a9-192a6291be07",
       "rawTextureUuid": "f7069a26-f7f2-4a55-8902-ad26ad2454a3",
       "trimType": "auto",

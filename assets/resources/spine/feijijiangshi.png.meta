@@ -1,16 +1,13 @@
 {
-  "ver": "2.3.3",
+  "ver": "2.2.0",
   "uuid": "10231b16-fbd0-4409-9f09-ecd17da123a1",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
   "premultiplyAlpha": false,
-  "genMipmaps": false,
-  "packable": true,
-  "platformSettings": {},
   "subMetas": {
     "feijijiangshi": {
-      "ver": "1.0.4",
+      "ver": "1.0.3",
       "uuid": "60f0fbad-c5c1-407e-9b6d-516a58fb59f6",
       "rawTextureUuid": "10231b16-fbd0-4409-9f09-ecd17da123a1",
       "trimType": "auto",

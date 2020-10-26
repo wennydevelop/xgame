@@ -1,16 +1,13 @@
 {
-  "ver": "2.3.3",
+  "ver": "2.2.0",
   "uuid": "2038af46-3d39-4a2b-ad6b-7bc37fdb3787",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
   "premultiplyAlpha": false,
-  "genMipmaps": false,
-  "packable": true,
-  "platformSettings": {},
   "subMetas": {
     "boluo": {
-      "ver": "1.0.4",
+      "ver": "1.0.3",
       "uuid": "c0cabd3e-2987-4066-a116-ea9db709c381",
       "rawTextureUuid": "2038af46-3d39-4a2b-ad6b-7bc37fdb3787",
       "trimType": "auto",
