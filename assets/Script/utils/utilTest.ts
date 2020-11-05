@@ -75,6 +75,30 @@ export default class utilTest {
         // center
     }
 
+    testCos() {
+
+        let output = (x: number, y: number) => {
+
+            let value = Math.atan2(y, x);
+            let angle = (value * 180) / Math.PI;
+            let tx = Math.cos(value);
+            let ty = Math.sin(value);
+
+            console.log(`x:${Math.floor(x * 100) / 100} y:${Math.floor(y * 100) / 100}`);
+            console.log(`角度:${angle} tx:${Math.floor(tx * 100) / 100} ty:${Math.floor(ty * 100) / 100}`);
+        }
+
+        let a: number = 1 / (Math.sqrt(2));
+        let arr: number[][] = [
+            [1, 0], [a, a], [0, 1], [-a, a], [-1, 0],
+            [a, -a], [0, -1], [-a, -a]
+        ]
+
+        for (let i = 0; i < arr.length; i++) {
+            output(arr[i][0], arr[i][1]);
+        }
+    }
+
     // 
     getSystemTime() {
         return new Date()

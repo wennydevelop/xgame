@@ -81,7 +81,8 @@ export default class xgame extends Scene {
         //utilTest.instance.testStorage()
         //this.testMath();
         //utilTest.instance.testCfg();
-        this.test1();
+        //this.test1();
+        utilTest.instance.testCos();
     }
 
     protected testEncrypt() {
